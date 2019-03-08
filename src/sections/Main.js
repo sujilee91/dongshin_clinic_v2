@@ -34,6 +34,9 @@ const styles = (theme) => ({
   title1: {
     color: 'white',
     [theme.breakpoints.down('md')]:{
+      fontSize: theme.typography.pxToRem(80)
+    },
+    [theme.breakpoints.down('xs')]:{
       fontSize: theme.typography.pxToRem(60)
     },
   },
@@ -56,15 +59,26 @@ const styles = (theme) => ({
     right: 0,
     width: theme.typography.pxToRem(500),
     opacity: '0.5',
-    
+    [theme.breakpoints.down('xs')]:{
+      bottom: '-70px',
+      width: theme.typography.pxToRem(450),
+    },
   },
   docImg: {
     width: theme.typography.pxToRem(300),
+    [theme.breakpoints.down('sm')]:{
+      paddingTop: theme.typography.pxToRem(50),
+    },
+    display: 'block',
+    margin: 'auto'
   },
   titleContainer: {
-    paddingTop: theme.typography.pxToRem(100),
+    paddingTop: theme.typography.pxToRem(65),
     [theme.breakpoints.down('md')]:{
       paddingTop: theme.typography.pxToRem(50),
+    },
+    [theme.breakpoints.down('sm')]:{
+      paddingTop: theme.typography.pxToRem(0),
     },
   },
   img: {
@@ -82,7 +96,7 @@ const styles = (theme) => ({
     [theme.breakpoints.down('md')]:{
       paddingTop: theme.typography.pxToRem(10),
       bottom: 0
-    },
+    }
   }
 });
 
@@ -111,7 +125,7 @@ function Main(props) {
               <img src={Sam} className={classes.img}/>
             </div>
           </Grid>
-          <Grid item={true} xs={12} sm={6}>
+          <Grid item={true} xs={12} sm={6} className={classes.docImgContainer}>
             <img src={ds2} className={classes.docImg} />
           </Grid>
         </Grid>

@@ -1,11 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "몽신의원",
+  "name": "사천 동신의원 - 가정의학과",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "DS.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/png"
     }
   ],
   "start_url": ".",

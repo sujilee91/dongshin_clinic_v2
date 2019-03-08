@@ -77,11 +77,11 @@ class About extends React.Component{
                   <div className={classes.iconWrapper}>
                     <FontAwesomeIcon icon={['fa', 'heartbeat']} className={classes.icon}/>
                   </div>
+                  <Typography variant="body1">
+                    원장 약력
+                  </Typography>
                 </CardContent>
               </Card>
-              <Typography variant="body1">
-                      원장 학력
-                  </Typography>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <Card elevation={1}>

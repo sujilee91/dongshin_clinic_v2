@@ -26,7 +26,8 @@ const styles = (customTheme) => ({
   },
   container: {
     maxWidth: '1170px',
-    margin: 'auto'
+    margin: 'auto',
+    paddingBottom: customTheme.typography.pxToRem(25)
   },
   map: {
     width: '100%'

@@ -50,7 +50,7 @@ class Header extends React.Component {
               <div>
                 <Button color="inherit" className={classes.menus}> 병원 소개 </Button>
                 <Button color="inherit" className={classes.menus}> 진료 안내 </Button>
-                <Button color="inherit" className={classes.menus}> 진료 문의 </Button>
+                <Button color="inherit" className={classes.menus}> 진료 시간 </Button>
                 <Button color="inherit" className={classes.menus}> 오시는 길</Button>
               </div>
             </Hidden>

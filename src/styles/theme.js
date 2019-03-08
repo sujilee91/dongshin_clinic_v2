@@ -16,7 +16,7 @@ const customTheme = createMuiTheme({
       ].join(','),
     h1: {
       fontFamily: ['Gothic A1'],
-      fontSize: 85,
+      fontSize: 110,
       fontWeight: 700,
       lineHeight: 1.04,
       letterSpacing: 0
@@ -84,6 +84,13 @@ const customTheme = createMuiTheme({
       fontWeight: 500,
       fontSize: 15,
     },
+    overline: {
+      fontFamily: ['Nanum Myeongjo'],
+      fontSize: 10,
+      fontWeight: 500,
+      lineHeight: 1.04,
+      letterSpacing: 0
+    }
   },
   palette: {
     primary: { 
