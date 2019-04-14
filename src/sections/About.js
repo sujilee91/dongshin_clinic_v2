@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles, MuiThemeProvider , Grid, Card, CardContent, Typography} from '@material-ui/core';
+import { withStyles, MuiThemeProvider , Card, CardContent} from '@material-ui/core';
 import Title from '../components/Title';
 import theme from '../styles/theme'
 import Slider from 'react-slick'

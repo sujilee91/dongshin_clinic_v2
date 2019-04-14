@@ -1,5 +1,4 @@
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
-import {theme as MuiTheme} from '@material-ui/core/styles';
 
 const customTheme = createMuiTheme({
   typography: {
