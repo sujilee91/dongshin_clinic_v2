@@ -1,5 +1,5 @@
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
-
+import {theme as MuiTheme} from '@material-ui/core/styles';
 
 const customTheme = createMuiTheme({
   typography: {
@@ -12,18 +12,10 @@ const customTheme = createMuiTheme({
         'serif',
         'sans-serif',
         'Do Hyeon',
-        'Song Myung'
       ].join(','),
     h1: {
       fontFamily: ['Gothic A1'],
       fontSize: 110,
-      fontWeight: 700,
-      lineHeight: 1.04,
-      letterSpacing: 0
-    },
-    h3:{
-      fontFamily: ['Nanum Myeongjo'],
-      fontSize: 27,
       fontWeight: 700,
       lineHeight: 1.04,
       letterSpacing: 0
@@ -35,12 +27,34 @@ const customTheme = createMuiTheme({
       lineHeight: 1.04,
       letterSpacing: 0
     },
+    h3:{
+      fontFamily: ['Nanum Myeongjo'],
+      fontSize: 27,
+      fontWeight: 700,
+      lineHeight: 1.04,
+      letterSpacing: 0
+    },
     h4: {
       fontFamily: ['Hind Vadodara'],
       fontSize: 28,
       fontWeight: 800,
       lineHeight: 1.04,
       letterSpacing: 0
+    },
+    h5: {
+      fontFamily: ['Do Hyeon'],
+      fontSize: 35,
+      fontWeight: 500,
+      letterSpacing: 0,
+      paddingTop: 20,
+      color: '#046BD1'
+    },
+    h6: {
+      fontFamily: ['Black Han Sans'],
+      fontSize: 32,
+      fontWeight: 500,
+      letterSpacing: 0,
+      color: '#999797',
     },
     body1: {
       fontFamily: ['Nanum Myeongjo'],
@@ -57,23 +71,17 @@ const customTheme = createMuiTheme({
       fontWeight: '500',
       fontSize: 20,
     },
-    display4: {
+    caption: {
       fontFamily: ['Do Hyeon'],
       fontSize: 35,
       fontWeight: 500,
       letterSpacing: 0,
       paddingTop: 20,
-      color: '#046BD1'
+      color: '#043E77'
     },
-    display3: {
-      fontFamily: ['Black Han Sans'],
-      fontSize: 32,
-      fontWeight: 500,
-      letterSpacing: 0,
-    },
-    display1: {
+    subtitle2: {
       fontFamily: ['Do Hyeon'],
-      fontSize: 20,
+      fontSize: 25,
       fontWeight: 500,
       lineHeight: 1.04,
       letterSpacing: 0,

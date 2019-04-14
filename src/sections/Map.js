@@ -34,6 +34,18 @@ const styles = (customTheme) => ({
   },
   phone: {
     paddingBottom: '20px'
+  },
+  address: {
+    fontFamily: 'Black Han Sans',
+    fontSize: 32,
+    fontWeight: 500,
+    letterSpacing: 0,
+    color: '#999797',
+    padding: '18px 0px',
+    [customTheme.breakpoints.down('md')]:{
+      fontSize: 25,
+      padding: '20px 0px'
+    },
   }
 });
 
@@ -55,38 +67,29 @@ class Map extends React.Component{
   render(){
   const { classes } = this.props
   return (
-    <div className={classes.root}>
+    <div className={classes.root} name="오시는 길">
       <div className={classes.container}>
         <Title value={'오시는 길'}/>
         <MuiThemeProvider theme={customTheme}>
           <Grid container spacing={40} direction={'row-reverse'} >
             <Grid item xs={12} sm={6}>
-              <div>
-                <Typography variant={"display4"}>
-                  진료 문의
-                </Typography>
-                <Typography variant={"display3"} className={classes.phone}>
-                  055-832-9882
-                </Typography>
-              </div>
-              <div>
-                <Typography variant={"display4"}>
+              <div className={classes.address}>
+                <Typography variant={"h5"}>
                   주소
                 </Typography>
-                <Typography variant={"display3"}>
+                <div className={classes.address}>
                   경남 사천시 중앙로 149 (2층) 
-                </Typography>
-                <Typography variant={"display3"} className={classes.phone}>
+                </div>
+                <div className={classes.address}>
                   경남 사천시 벌리동 495-3
-                </Typography>
+                </div>
               </div>
-              
               <Button variant="contained" color="primary" onClick={()=> window.open("https://map.naver.com/?eText=%EB%8F%99%EC%8B%A0%EC%9D%98%EC%9B%90&eType=SITE_1&edid=13261713&elng=8319ca8f33504e9ff745cec556d6bafa&elat=f302fa271f1d581063ca93fe91c5acc9", "_blank")}>
                 길 찾기
               </Button>
             </Grid>
             <Grid item xs={12} sm={6} lg={5}>
-              <img src={MapPic} className={classes.map}/>
+              <img src={MapPic} className={classes.map} alt="Map"/>
             </Grid>
           </Grid>
         </MuiThemeProvider>

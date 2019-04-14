@@ -8,7 +8,6 @@ import ds2 from '../images/DS2.png'
 import Sam from '../images/Sam.png'
 import GNU from '../images/GNU.png'
 import Asan from '../images/Asan.png'
-import Pattern from '../images/bg-pattern.png'
 
 const styles = (theme) => ({
   root: {
@@ -17,13 +16,12 @@ const styles = (theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 0,
-    backgroundColor: 'rgba(4, 62, 119, 0.2)',
+    backgroundColor: 'rgba(4, 107, 209, 0.2)',
   },
   container: {
     maxWidth: '1170px',
     margin: 'auto',
     marginTop: theme.typography.pxToRem(30),
-    backgroundColor: 'inherit',
     paddingLeft: theme.typography.pxToRem(50),
     [theme.breakpoints.down('sm')]:{
       paddingLeft: theme.typography.pxToRem(20),
@@ -33,6 +31,7 @@ const styles = (theme) => ({
   },
   title1: {
     color: 'white',
+    textShadow: '0px 0px 50px rgba(4, 62, 119, 0.5)',
     [theme.breakpoints.down('md')]:{
       fontSize: theme.typography.pxToRem(80)
     },
@@ -41,6 +40,7 @@ const styles = (theme) => ({
     },
   },
   title2: {
+    textShadow: '0px 0px 30px #043E77',
     paddingTop: '15px',
     marginBottom: '35px',
     paddingLeft: '5px',
@@ -104,8 +104,8 @@ function Main(props) {
   const { classes } = props;
   return (
     <MuiThemeProvider theme={theme}>
-      <div className={classes.imageWrapper}>
-        <img src={backImage} className={classes.backImage}/>
+      <div className={classes.imageWrapper} name="동신의원">
+        <img src={backImage} className={classes.backImage} alt="bg"/>
       </div>
       <div className={classes.root}>
         <Grid container={true} spacing={0} className={classes.container}>
@@ -120,13 +120,13 @@ function Main(props) {
               <Typography variant="subtitle1">
                 협력 기관
               </Typography>
-              <img src={Asan} className={classes.img}/>
-              <img src={GNU} className={classes.img}/>
-              <img src={Sam} className={classes.img}/>
+              <img src={Asan} className={classes.img} alt="Asan"/>
+              <img src={GNU} className={classes.img} alt="GNU"/>
+              <img src={Sam} className={classes.img} alt="Samsung"/>
             </div>
           </Grid>
           <Grid item={true} xs={12} sm={6} className={classes.docImgContainer}>
-            <img src={ds2} className={classes.docImg} />
+            <img src={ds2} className={classes.docImg} alt="ds"/>
           </Grid>
         </Grid>
       </div>
