@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Designed, customized, created by SuJi Lee, for [Dongshin Clinic]
 (http://dongshinclinic.com).
 
-##Implementation
+## Implementation
 
 This project has implemented open source packages below: 
 
