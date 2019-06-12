@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles, MuiThemeProvider , Grid, Typography} from '@material-ui/core';
+import { withStyles, MuiThemeProvider, Grid, Typography } from '@material-ui/core';
 import Title from '../components/Title';
 import theme from '../styles/theme'
 import ClinicSketch from '../images/ClinicSketch.png'
@@ -11,11 +11,11 @@ const styles = (theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 0,
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('sm')]: {
       padding: '25px',
       paddingTop: '50px'
     },
-    textAlign:'right',
+    textAlign: 'right',
   },
   container: {
     maxWidth: '1170px',
@@ -42,7 +42,7 @@ const styles = (theme) => ({
     fontWeight: 500,
     letterSpacing: 0,
     color: '#999797',
-    [theme.breakpoints.down('md')]:{
+    [theme.breakpoints.down('md')]: {
       fontSize: 28,
       padding: '20px 0px'
     },
@@ -53,10 +53,8 @@ const styles = (theme) => ({
   }
 });
 
-class Info extends React.Component{
-
-  render(){
-    const { classes } = this.props
+const Info = (props) => {
+  const { classes } = props
   return (
     <MuiThemeProvider theme={theme}>
       <div className={classes.root} name="진료 시간">
@@ -111,14 +109,14 @@ class Info extends React.Component{
               </div>
 
             </Grid>
-            <Grid item xs={12} sm={4}className={classes.imgContainer}>
-              <img src={ClinicSketch} className={classes.img} alt="Sketch"/>
+            <Grid item xs={12} sm={4} className={classes.imgContainer}>
+              <img src={ClinicSketch} className={classes.img} alt="Sketch" />
             </Grid>
           </Grid>
         </div>
       </div>
     </MuiThemeProvider>
-    )}
+  )
 }
 
 export default withStyles(styles)(Info);

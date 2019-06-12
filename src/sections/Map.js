@@ -18,7 +18,7 @@ const styles = (customTheme) => ({
     zIndex: 0,
     background: 'linear-gradient(to right, rgba(256,256, 256, 1) 13%, transparent 0)',
     backgroundColor: 'rgba(4, 62, 119, 0.08)',
-    [customTheme.breakpoints.down('md')]:{
+    [customTheme.breakpoints.down('md')]: {
       padding: '50px 25px',
       background: 'linear-gradient(to right, rgba(4, 62, 119, 0.08) 100%, transparent 0)',
     },
@@ -42,34 +42,19 @@ const styles = (customTheme) => ({
     letterSpacing: 0,
     color: '#999797',
     padding: '18px 0px',
-    [customTheme.breakpoints.down('md')]:{
+    [customTheme.breakpoints.down('md')]: {
       fontSize: 25,
       padding: '20px 0px'
     },
   }
 });
 
-class Map extends React.Component{
-  constructor(props) {
-    super(props)
-
-    this.state = {
-     openDialog: false
-    }
-  };
-
-  handleClose = () => {
-    this.setState({
-      openDialog: false
-    })
-  }
-
-  render(){
-  const { classes } = this.props
+const Map = (props) => {
+  const { classes } = props
   return (
     <div className={classes.root} name="오시는 길">
       <div className={classes.container}>
-        <Title value={'오시는 길'}/>
+        <Title value={'오시는 길'} />
         <MuiThemeProvider theme={customTheme}>
           <Grid container spacing={40} direction={'row-reverse'} >
             <Grid item xs={12} sm={6}>
@@ -78,25 +63,24 @@ class Map extends React.Component{
                   주소
                 </Typography>
                 <div className={classes.address}>
-                  경남 사천시 중앙로 149 (2층) 
+                  경남 사천시 중앙로 149 (2층)
                 </div>
                 <div className={classes.address}>
                   경남 사천시 벌리동 495-3
                 </div>
               </div>
-              <Button variant="contained" color="primary" onClick={()=> window.open("https://map.naver.com/?eText=%EB%8F%99%EC%8B%A0%EC%9D%98%EC%9B%90&eType=SITE_1&edid=13261713&elng=8319ca8f33504e9ff745cec556d6bafa&elat=f302fa271f1d581063ca93fe91c5acc9", "_blank")}>
+              <Button variant="contained" color="primary" onClick={() => window.open("https://map.naver.com/?eText=%EB%8F%99%EC%8B%A0%EC%9D%98%EC%9B%90&eType=SITE_1&edid=13261713&elng=8319ca8f33504e9ff745cec556d6bafa&elat=f302fa271f1d581063ca93fe91c5acc9", "_blank")}>
                 길 찾기
               </Button>
             </Grid>
             <Grid item xs={12} sm={6} lg={5}>
-              <img src={MapPic} className={classes.map} alt="Map"/>
+              <img src={MapPic} className={classes.map} alt="Map" />
             </Grid>
           </Grid>
         </MuiThemeProvider>
       </div>
     </div>
-    );
-  }
+  );
 }
 
 export default withStyles(styles)(Map);

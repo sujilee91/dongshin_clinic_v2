@@ -23,7 +23,7 @@ const styles = (theme) => ({
     margin: 'auto',
     marginTop: theme.typography.pxToRem(30),
     paddingLeft: theme.typography.pxToRem(50),
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('sm')]: {
       paddingLeft: theme.typography.pxToRem(20),
       textAlign: 'center'
     },
@@ -32,10 +32,10 @@ const styles = (theme) => ({
   title1: {
     color: 'white',
     textShadow: '0px 0px 50px rgba(4, 62, 119, 0.5)',
-    [theme.breakpoints.down('md')]:{
+    [theme.breakpoints.down('md')]: {
       fontSize: theme.typography.pxToRem(80)
     },
-    [theme.breakpoints.down('xs')]:{
+    [theme.breakpoints.down('xs')]: {
       fontSize: theme.typography.pxToRem(60)
     },
   },
@@ -49,7 +49,7 @@ const styles = (theme) => ({
   },
   divider: {
     maxWidth: '80%',
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('sm')]: {
       margin: 'auto'
     },
   },
@@ -59,14 +59,14 @@ const styles = (theme) => ({
     right: 0,
     width: theme.typography.pxToRem(500),
     opacity: '0.5',
-    [theme.breakpoints.down('xs')]:{
+    [theme.breakpoints.down('xs')]: {
       bottom: '-70px',
       width: theme.typography.pxToRem(450),
     },
   },
   docImg: {
     width: theme.typography.pxToRem(300),
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('sm')]: {
       paddingTop: theme.typography.pxToRem(50),
     },
     display: 'block',
@@ -74,10 +74,10 @@ const styles = (theme) => ({
   },
   titleContainer: {
     paddingTop: theme.typography.pxToRem(65),
-    [theme.breakpoints.down('md')]:{
+    [theme.breakpoints.down('md')]: {
       paddingTop: theme.typography.pxToRem(50),
     },
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('sm')]: {
       paddingTop: theme.typography.pxToRem(0),
     },
   },
@@ -89,23 +89,23 @@ const styles = (theme) => ({
     verticalAlign: 'bottom',
     margin: '10px',
   },
-  corp:{
+  corp: {
     bottom: '-80px',
     position: 'relative',
     paddingTop: '50px',
-    [theme.breakpoints.down('md')]:{
+    [theme.breakpoints.down('md')]: {
       paddingTop: theme.typography.pxToRem(10),
       bottom: 0
     }
   }
 });
 
-function Main(props) {
+const Main = (props) => {
   const { classes } = props;
   return (
     <MuiThemeProvider theme={theme}>
       <div className={classes.imageWrapper} name="동신의원">
-        <img src={backImage} className={classes.backImage} alt="bg"/>
+        <img src={backImage} className={classes.backImage} alt="bg" />
       </div>
       <div className={classes.root}>
         <Grid container={true} spacing={0} className={classes.container}>
@@ -120,13 +120,13 @@ function Main(props) {
               <Typography variant="subtitle1">
                 협력 기관
               </Typography>
-              <img src={Asan} className={classes.img} alt="Asan"/>
-              <img src={GNU} className={classes.img} alt="GNU"/>
-              <img src={Sam} className={classes.img} alt="Samsung"/>
+              <img src={Asan} className={classes.img} alt="Asan" />
+              <img src={GNU} className={classes.img} alt="GNU" />
+              <img src={Sam} className={classes.img} alt="Samsung" />
             </div>
           </Grid>
           <Grid item={true} xs={12} sm={6} className={classes.docImgContainer}>
-            <img src={ds2} className={classes.docImg} alt="ds"/>
+            <img src={ds2} className={classes.docImg} alt="ds" />
           </Grid>
         </Grid>
       </div>

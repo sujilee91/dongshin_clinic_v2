@@ -12,8 +12,6 @@ import Fam from '../images/Family-Medicine.png'
 import Surg from '../images/surg.png'
 import Ent from '../images/ENT.png'
 import Hidden from '@material-ui/core/Hidden';
-
-
 import { Typography } from '@material-ui/core';
 
 
@@ -79,23 +77,8 @@ const styles = (customTheme) => ({
   }
 });
 
-class About extends React.Component{
-  constructor(props) {
-    super(props)
-
-    this.state = {
-     openDialog: false
-    }
-  };
-
-  handleClose = () => {
-    this.setState({
-      openDialog: false
-    })
-  }
-
-  render(){
-  const { classes } = this.props
+const Department = (props) =>{
+  const { classes } = props
   return (
     <div className={classes.root}  name="진료 과목">
       <div className={classes.container}>
@@ -211,7 +194,6 @@ class About extends React.Component{
       </div>
     </div>
     );
-  }
 }
 
-export default withStyles(styles)(About);
+export default withStyles(styles)(Department);

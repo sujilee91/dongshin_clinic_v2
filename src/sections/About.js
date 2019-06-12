@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles, MuiThemeProvider , Card, CardContent} from '@material-ui/core';
+import { withStyles, MuiThemeProvider, Card, CardContent } from '@material-ui/core';
 import Title from '../components/Title';
 import theme from '../styles/theme'
 import Slider from 'react-slick'
@@ -19,7 +19,7 @@ const styles = (theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 0,
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('sm')]: {
       padding: '25px',
     },
   },
@@ -32,7 +32,7 @@ const styles = (theme) => ({
     padding: '10px 30px',
     justifyContent: 'center'
   },
-  imageContianer:{},
+  imageContianer: {},
   image: {
     width: '100%',
   },
@@ -62,7 +62,7 @@ const styles = (theme) => ({
     fontFamily: 'Gothic A1',
     fontSize: 18,
     fontWeight: 300,
-    textAlign:'right',
+    textAlign: 'right',
   },
   inner: {
     padding: '5px 0px'
@@ -81,7 +81,7 @@ const styles = (theme) => ({
     borderRadius: '25px',
     margin: 'auto',
     padding: '5px 0px'
-  },  
+  },
   backImage: {
     width: theme.typography.pxToRem(120),
     opacity: '0.3',
@@ -90,23 +90,12 @@ const styles = (theme) => ({
   },
 });
 
-class About extends React.Component{
+class About extends React.Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-      open: false,
-      type: ''
-    }
   };
 
-  handleClose = () => {
-    this.setState({
-      open: false
-    })
-  }
-
-  render(){
+  render() {
     const { classes } = this.props
     const sliderSettings = {
       dots: true,
@@ -142,72 +131,73 @@ class About extends React.Component{
         }
       ]
     }
-  return (
-    <MuiThemeProvider theme={theme}>
-      <div className={classes.root} name="병원 소개">
-        <div className={classes.container}>
-          <Title value={'병원 소개'}/>
-          <Slider {...sliderSettings} className={classes.slickSlider}>
-            <div>
-              <Card elevation={1} className={classes.cards}>
-                <div className={classes.cardGradient}>
+    return (
+      <MuiThemeProvider theme={theme}>
+        <div className={classes.root} name="병원 소개">
+          <div className={classes.container}>
+            <Title value={'병원 소개'} />
+            <Slider {...sliderSettings} className={classes.slickSlider}>
+              <div>
+                <Card elevation={1} className={classes.cards}>
+                  <div className={classes.cardGradient}>
                     <span className={classes.cardTitle}>원장 약력</span>
-                </div>
-                <CardContent className={classes.cardContent}>
-                  <div className={classes.inner}>울산 해성병원 가정의학과 과장</div>
-                  <div className={classes.inner}>가정의학과 전문의</div>
-                  <div className={classes.inner}>내시경전문의</div>
-                  <div className={classes.inner}>노인 의학 전문의</div>
-                  <div className={classes.inner}>동신의원 원장 20년</div>
-                  <img src={backImage} className={classes.backImage} alt="bg"/>
-                </CardContent>
-              </Card>
-            </div>
-            <div>
-              <Card elevation={1} className={classes.cards}>
-                <div className={classes.cardGradient}>
+                  </div>
+                  <CardContent className={classes.cardContent}>
+                    <div className={classes.inner}>울산 해성병원 가정의학과 과장</div>
+                    <div className={classes.inner}>가정의학과 전문의</div>
+                    <div className={classes.inner}>내시경전문의</div>
+                    <div className={classes.inner}>노인 의학 전문의</div>
+                    <div className={classes.inner}>동신의원 원장 20년</div>
+                    <img src={backImage} className={classes.backImage} alt="bg" />
+                  </CardContent>
+                </Card>
+              </div>
+              <div>
+                <Card elevation={1} className={classes.cards}>
+                  <div className={classes.cardGradient}>
                     <span className={classes.cardTitle}>검사</span>
-                </div>
-                <CardContent className={classes.cardContent}>
-                  <div className={classes.inner}>위 내시경 (내시경 전문의)</div>
-                  <div className={classes.inner}>초음파 / 골다공증 검사</div>
-                  <div className={classes.inner}>심전도 / 방사선 검사</div>
-                  <div className={classes.inner}>갑상선 / 간기능 / 신기능 검사</div>
-                  <div className={classes.inner}>각종 혈액 / 각종 암 검사</div>
-                  <img src={scope} className={classes.backImage} alt="bg"/>
-                </CardContent>
-              </Card>
-            </div>
-            <div>
-              <Card elevation={1} className={classes.cards}>
-                <div className={classes.cardGradient}>
+                  </div>
+                  <CardContent className={classes.cardContent}>
+                    <div className={classes.inner}>위 내시경 (내시경 전문의)</div>
+                    <div className={classes.inner}>초음파 / 골다공증 검사</div>
+                    <div className={classes.inner}>심전도 / 방사선 검사</div>
+                    <div className={classes.inner}>갑상선 / 간기능 / 신기능 검사</div>
+                    <div className={classes.inner}>각종 혈액 / 각종 암 검사</div>
+                    <img src={scope} className={classes.backImage} alt="bg" />
+                  </CardContent>
+                </Card>
+              </div>
+              <div>
+                <Card elevation={1} className={classes.cards}>
+                  <div className={classes.cardGradient}>
                     <span className={classes.cardTitle}>검진</span>
-                </div>
-                <CardContent className={classes.cardContent}>
-                  <div className={classes.inner}> 종합 검진</div>
-                  <div className={classes.inner}> 국민건강보험 무료 검진</div>
-                  <img src={medkit} className={classes.backImage} alt="bg"/>
-                </CardContent>
-              </Card>
-            </div>
-            <div>
-              <Card elevation={1} className={classes.cards}>
-                <div className={classes.cardGradient}>
+                  </div>
+                  <CardContent className={classes.cardContent}>
+                    <div className={classes.inner}> 종합 검진</div>
+                    <div className={classes.inner}> 국민건강보험 무료 검진</div>
+                    <img src={medkit} className={classes.backImage} alt="bg" />
+                  </CardContent>
+                </Card>
+              </div>
+              <div>
+                <Card elevation={1} className={classes.cards}>
+                  <div className={classes.cardGradient}>
                     <span className={classes.cardTitle}>협력 병원</span>
-                </div>
-                <CardContent className={classes.cardContent}>
-                  <img src={Asan} className={classes.img} alt="Asan"/>
-                  <img src={GNU} className={classes.img} alt="GNU"/>
-                  <img src={Sam} className={classes.img} alt="Samsung"/>
-                  <img src={corp} className={classes.backImage} alt="bg"/>
-                </CardContent>
-              </Card>
-            </div>
-          </Slider>
+                  </div>
+                  <CardContent className={classes.cardContent}>
+                    <img src={Asan} className={classes.img} alt="Asan" />
+                    <img src={GNU} className={classes.img} alt="GNU" />
+                    <img src={Sam} className={classes.img} alt="Samsung" />
+                    <img src={corp} className={classes.backImage} alt="bg" />
+                  </CardContent>
+                </Card>
+              </div>
+            </Slider>
+          </div>
         </div>
-      </div>
-    </MuiThemeProvider>
-    )}
+      </MuiThemeProvider>
+    )
+  }
 }
 
 export default withStyles(styles)(About);
