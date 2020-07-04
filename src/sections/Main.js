@@ -1,7 +1,7 @@
-import React from 'react';
-import { withStyles, MuiThemeProvider } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+import React from 'react'
+import { withStyles, MuiThemeProvider } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
 import theme from '../styles/theme'
 import backImage from '../images/med.png'
 import ds2 from '../images/DS2.png'
@@ -21,36 +21,52 @@ const styles = (theme) => ({
   container: {
     maxWidth: '1170px',
     margin: 'auto',
-    marginTop: theme.typography.pxToRem(30),
+    marginTop: '1rem',
     paddingLeft: theme.typography.pxToRem(50),
     [theme.breakpoints.down('sm')]: {
-      paddingLeft: theme.typography.pxToRem(20),
-      textAlign: 'center'
+      paddingLeft: theme.typography.pxToRem(0),
+      textAlign: 'center',
     },
-    backgroundColor: 'none'
+    backgroundColor: 'none',
   },
   title1: {
-    color: 'white',
-    textShadow: '0px 0px 50px rgba(4, 62, 119, 0.5)',
+    color: '#08219A',
     [theme.breakpoints.down('md')]: {
-      fontSize: theme.typography.pxToRem(80)
+      fontSize: theme.typography.pxToRem(80),
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: theme.typography.pxToRem(60)
+      fontSize: theme.typography.pxToRem(60),
     },
   },
   title2: {
-    textShadow: '0px 0px 30px #043E77',
+    textShadow: '0px 0px 30px #08219A',
     paddingTop: '15px',
     marginBottom: '35px',
-    paddingLeft: '5px',
+    paddingLeft: '15px',
     color: theme.palette.primary.contrastText,
-    opacity: '0.7'
+    fontSize: '23px',
+    lineHeight: '28px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '18px',
+      paddingLeft: '7px',
+      paddingRight: '7px',
+    },
+  },
+  title3: {
+    textShadow: '0px 0px 30px #08219A',
+    paddingLeft: '15px',
+    color: theme.palette.primary.contrastText,
+    fontSize: '23px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '18px',
+      paddingLeft: '7px',
+      paddingRight: '7px',
+    },
   },
   divider: {
     maxWidth: '80%',
     [theme.breakpoints.down('sm')]: {
-      margin: 'auto'
+      margin: 'auto',
     },
   },
   backImage: {
@@ -70,7 +86,7 @@ const styles = (theme) => ({
       paddingTop: theme.typography.pxToRem(50),
     },
     display: 'block',
-    margin: 'auto'
+    margin: 'auto',
   },
   titleContainer: {
     paddingTop: theme.typography.pxToRem(65),
@@ -90,18 +106,18 @@ const styles = (theme) => ({
     margin: '10px',
   },
   corp: {
-    bottom: '-80px',
+    bottom: '-50px',
     position: 'relative',
     paddingTop: '50px',
     [theme.breakpoints.down('md')]: {
-      paddingTop: theme.typography.pxToRem(10),
-      bottom: 0
-    }
-  }
-});
+      paddingTop: theme.typography.pxToRem(50),
+      bottom: 0,
+    },
+  },
+})
 
 const Main = (props) => {
-  const { classes } = props;
+  const { classes } = props
   return (
     <MuiThemeProvider theme={theme}>
       <div className={classes.imageWrapper} name="동신의원">
@@ -110,16 +126,17 @@ const Main = (props) => {
       <div className={classes.root}>
         <Grid container={true} spacing={0} className={classes.container}>
           <Grid item={true} xs={12} sm={6} className={classes.titleContainer}>
+            <Typography variant="h3" className={classes.title3}>
+              사랑과 정성을 다합니다.
+            </Typography>
             <Typography variant="h3" className={classes.title2}>
-              사랑과 정성을 다하는 -
+              30년 경력의 가정의학과 전문의와 함께하는 -
             </Typography>
             <Typography variant="h1" className={classes.title1}>
               동신의원
             </Typography>
             <div className={classes.corp}>
-              <Typography variant="subtitle1">
-                협력 기관
-              </Typography>
+              <Typography variant="subtitle1">협력 기관</Typography>
               <img src={Asan} className={classes.img} alt="Asan" />
               <img src={GNU} className={classes.img} alt="GNU" />
               <img src={Sam} className={classes.img} alt="Samsung" />
@@ -131,7 +148,7 @@ const Main = (props) => {
         </Grid>
       </div>
     </MuiThemeProvider>
-  );
+  )
 }
 
-export default withStyles(styles)(Main);
+export default withStyles(styles)(Main)

@@ -1,11 +1,18 @@
-import React from 'react';
-import { withStyles, MuiThemeProvider, Grid } from '@material-ui/core';
+import React from 'react'
+import { withStyles, MuiThemeProvider, Grid } from '@material-ui/core'
 import theme from '../styles/theme'
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from 'react-scroll'
 
 const styles = (theme) => ({
   root: {
-    backgroundColor: '#046BD1',
+    backgroundColor: '#08219A',
     marginTop: theme.typography.pxToRem(100),
     padding: theme.typography.pxToRem(20),
   },
@@ -20,16 +27,16 @@ const styles = (theme) => ({
     color: 'white',
     marginBottom: '20px',
     textDecoration: 'none',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   logo: {
     paddingRight: '10px',
     margin: 'auto',
-    verticalAlign: 'middle'
+    verticalAlign: 'middle',
   },
   dev: {
     textAlign: 'right',
-    verticalAlign: 'bottom'
+    verticalAlign: 'bottom',
   },
   tag: {
     color: 'white',
@@ -50,72 +57,97 @@ const styles = (theme) => ({
     textDecoration: 'none',
     cursor: 'pointer',
     [theme.breakpoints.down('sm')]: {
-      display: 'block'
+      display: 'block',
     },
-  }
-});
+  },
+})
 
 const Info = (props) => {
   const { classes } = props
   return (
     <MuiThemeProvider theme={theme}>
       <div className={classes.root}>
-        <Grid container className={classes.container} justify={"flex-end"}>
-          <Grid item sm={6} xs={12} >
-            <span onClick={() => {
-              scroller.scrollTo('동신의원', {
-                duration: 1000,
-                delay: 100,
-                smooth: true,
-                offset: -50
-              })
-            }} className={classes.title}>
-              <img src="./DS.png" height="28px" widhth="28px" className={classes.logo} alt="Clinic" />
+        <Grid container className={classes.container} justify={'flex-end'}>
+          <Grid item sm={6} xs={12}>
+            <span
+              onClick={() => {
+                scroller.scrollTo('동신의원', {
+                  duration: 1000,
+                  delay: 100,
+                  smooth: true,
+                  offset: -50,
+                })
+              }}
+              className={classes.title}
+            >
+              <img
+                src="./DS.png"
+                height="28px"
+                widhth="28px"
+                className={classes.logo}
+                alt="Clinic"
+              />
               <span>동신의원</span>
             </span>
-            <span onClick={() => {
-              scroller.scrollTo('병원 소개', {
-                duration: 1000,
-                delay: 100,
-                smooth: true,
-                offset: -50
-              })
-            }} className={classes.dir}>
+            <span
+              onClick={() => {
+                scroller.scrollTo('병원 소개', {
+                  duration: 1000,
+                  delay: 100,
+                  smooth: true,
+                  offset: -50,
+                })
+              }}
+              className={classes.dir}
+            >
               병원 소개
             </span>
-            <span onClick={() => {
-              scroller.scrollTo('진료 과목', {
-                duration: 1000,
-                delay: 100,
-                smooth: true,
-                offset: -50
-              })
-            }} className={classes.dir}>
+            <span
+              onClick={() => {
+                scroller.scrollTo('진료 과목', {
+                  duration: 1000,
+                  delay: 100,
+                  smooth: true,
+                  offset: -50,
+                })
+              }}
+              className={classes.dir}
+            >
               진료 과목
             </span>
-            <span onClick={() => {
-              scroller.scrollTo('진료 시간', {
-                duration: 1000,
-                delay: 100,
-                smooth: true,
-                offset: -50
-              })
-            }} className={classes.dir}>
+            <span
+              onClick={() => {
+                scroller.scrollTo('진료 시간', {
+                  duration: 1000,
+                  delay: 100,
+                  smooth: true,
+                  offset: -50,
+                })
+              }}
+              className={classes.dir}
+            >
               진료 안내
             </span>
-            <span onClick={() => {
-              scroller.scrollTo('오시는 길', {
-                duration: 1000,
-                delay: 100,
-                smooth: true,
-                offset: -50
-              })
-            }} className={classes.dir}>
+            <span
+              onClick={() => {
+                scroller.scrollTo('오시는 길', {
+                  duration: 1000,
+                  delay: 100,
+                  smooth: true,
+                  offset: -50,
+                })
+              }}
+              className={classes.dir}
+            >
               오시는 길
             </span>
           </Grid>
           <Grid item sm={6} xs={12} className={classes.dev}>
-            <div href="http://www.sujilee.ca" target="_blank" className={classes.tag}>
+            <div
+              href="http://www.sujilee.ca"
+              target="_blank"
+              className={classes.tag}
+            >
               2019, Designed & Created by SuJi Lee
             </div>
           </Grid>
@@ -125,4 +157,4 @@ const Info = (props) => {
   )
 }
 
-export default withStyles(styles)(Info);
+export default withStyles(styles)(Info)

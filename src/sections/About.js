@@ -1,6 +1,11 @@
-import React from 'react';
-import { withStyles, MuiThemeProvider, Card, CardContent } from '@material-ui/core';
-import Title from '../components/Title';
+import React from 'react'
+import {
+  withStyles,
+  MuiThemeProvider,
+  Card,
+  CardContent,
+} from '@material-ui/core'
+import Title from '../components/Title'
 import theme from '../styles/theme'
 import Slider from 'react-slick'
 import Sam from '../images/Sam.png'
@@ -10,7 +15,6 @@ import backImage from '../images/med.png'
 import scope from '../images/Scope.png'
 import medkit from '../images/Medkit.png'
 import corp from '../images/Corp.png'
-
 
 const styles = (theme) => ({
   root: {
@@ -25,12 +29,12 @@ const styles = (theme) => ({
   },
   container: {
     maxWidth: '1170px',
-    margin: 'auto'
+    margin: 'auto',
   },
   resumeButton: {
     fontSize: '1rem',
     padding: '10px 30px',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   imageContianer: {},
   image: {
@@ -41,7 +45,7 @@ const styles = (theme) => ({
     fontSize: theme.typography.pxToRem(160),
     textAlign: 'center',
     margin: 'auto',
-    width: '100%'
+    width: '100%',
   },
   cards: {
     margin: '20px',
@@ -50,13 +54,13 @@ const styles = (theme) => ({
     borderRadius: '12px',
   },
   slickSlider: {
-    marginBottom: '50px'
+    marginBottom: '50px',
   },
   cardGradient: {
-    background: '#043E77',
+    background: '#08219A',
     maxHeight: '28px',
     verticalAlign: 'middle',
-    padding: '10px'
+    padding: '10px',
   },
   cardContent: {
     fontFamily: 'Gothic A1',
@@ -65,14 +69,14 @@ const styles = (theme) => ({
     textAlign: 'right',
   },
   inner: {
-    padding: '5px 0px'
+    padding: '5px 0px',
   },
   cardTitle: {
     fontFamily: 'Do Hyeon',
     fontSize: 22,
     fontWeight: 600,
     verticalAlign: 'middle',
-    color: '#ffff'
+    color: '#ffff',
   },
   img: {
     width: '150px',
@@ -80,20 +84,20 @@ const styles = (theme) => ({
     backgroundColor: 'white',
     borderRadius: '25px',
     margin: 'auto',
-    padding: '5px 0px'
+    padding: '5px 0px',
   },
   backImage: {
     width: theme.typography.pxToRem(120),
     opacity: '0.3',
     position: 'absolute',
-    bottom: '30px'
+    bottom: '30px',
   },
-});
+})
 
 class About extends React.Component {
   constructor(props) {
     super(props)
-  };
+  }
 
   render() {
     const { classes } = this.props
@@ -112,24 +116,24 @@ class About extends React.Component {
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
-            dots: true
-          }
+            dots: true,
+          },
         },
         {
           breakpoint: 960,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
-          }
+            slidesToScroll: 2,
+          },
         },
         {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
+            slidesToScroll: 1,
+          },
+        },
+      ],
     }
     return (
       <MuiThemeProvider theme={theme}>
@@ -143,12 +147,18 @@ class About extends React.Component {
                     <span className={classes.cardTitle}>원장 약력</span>
                   </div>
                   <CardContent className={classes.cardContent}>
-                    <div className={classes.inner}>울산 해성병원 가정의학과 과장</div>
+                    <div className={classes.inner}>
+                      울산 해성병원 가정의학과 과장
+                    </div>
                     <div className={classes.inner}>가정의학과 전문의</div>
                     <div className={classes.inner}>내시경전문의</div>
                     <div className={classes.inner}>노인 의학 전문의</div>
                     <div className={classes.inner}>동신의원 원장 20년</div>
-                    <img src={backImage} className={classes.backImage} alt="bg" />
+                    <img
+                      src={backImage}
+                      className={classes.backImage}
+                      alt="bg"
+                    />
                   </CardContent>
                 </Card>
               </div>
@@ -158,11 +168,17 @@ class About extends React.Component {
                     <span className={classes.cardTitle}>검사</span>
                   </div>
                   <CardContent className={classes.cardContent}>
-                    <div className={classes.inner}>위 내시경 (내시경 전문의)</div>
+                    <div className={classes.inner}>
+                      위 내시경 (내시경 전문의)
+                    </div>
                     <div className={classes.inner}>초음파 / 골다공증 검사</div>
                     <div className={classes.inner}>심전도 / 방사선 검사</div>
-                    <div className={classes.inner}>갑상선 / 간기능 / 신기능 검사</div>
-                    <div className={classes.inner}>각종 혈액 / 각종 암 검사</div>
+                    <div className={classes.inner}>
+                      갑상선 / 간기능 / 신기능 검사
+                    </div>
+                    <div className={classes.inner}>
+                      각종 혈액 / 각종 암 검사
+                    </div>
                     <img src={scope} className={classes.backImage} alt="bg" />
                   </CardContent>
                 </Card>
@@ -200,4 +216,4 @@ class About extends React.Component {
   }
 }
 
-export default withStyles(styles)(About);
+export default withStyles(styles)(About)
