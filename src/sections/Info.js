@@ -1,6 +1,11 @@
-import React from 'react';
-import { withStyles, MuiThemeProvider, Grid, Typography } from '@material-ui/core';
-import Title from '../components/Title';
+import React from 'react'
+import {
+  withStyles,
+  MuiThemeProvider,
+  Grid,
+  Typography,
+} from '@material-ui/core'
+import Title from '../components/Title'
 import theme from '../styles/theme'
 import ClinicSketch from '../images/ClinicSketch.png'
 
@@ -13,7 +18,7 @@ const styles = (theme) => ({
     zIndex: 0,
     [theme.breakpoints.down('sm')]: {
       padding: '25px',
-      paddingTop: '50px'
+      paddingTop: '50px',
     },
     textAlign: 'right',
   },
@@ -22,19 +27,19 @@ const styles = (theme) => ({
     margin: 'auto',
   },
   times: {
-    paddingLeft: theme.typography.pxToRem(30)
+    paddingLeft: theme.typography.pxToRem(30),
   },
   openHour: {
-    padding: '10px 18px'
+    padding: '10px 18px',
   },
   contact: {
-    padding: '10px 0px'
+    padding: '10px 0px',
   },
   img: {
     width: '100%',
   },
   imgContainer: {
-    margin: 'auto'
+    margin: 'auto',
   },
   subText: {
     fontFamily: 'Black Han Sans',
@@ -44,14 +49,22 @@ const styles = (theme) => ({
     color: '#999797',
     [theme.breakpoints.down('md')]: {
       fontSize: 28,
-      padding: '20px 0px'
+      padding: '20px 0px',
     },
   },
   miniText: {
     fontWeight: 700,
     color: '#999797',
-  }
-});
+  },
+  miniTextWarning: {
+    fontWeight: 700,
+    color: '#ff3a3a',
+  },
+  timetable: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+})
 
 const Info = (props) => {
   const { classes } = props
@@ -59,55 +72,40 @@ const Info = (props) => {
     <MuiThemeProvider theme={theme}>
       <div className={classes.root} name="진료 시간">
         <div className={classes.container}>
-          <Title value={'진료 시간 & 연락처'} />
+          <Title value={'진료 시간 및 연락처'} />
           <Grid container spacing={16}>
             <Grid item xs={12} sm={3}>
               <div className={classes.contact}>
-                <Typography variant={"caption"}>
-                  진료 문의
-                </Typography>
-                <div className={classes.subText}>
-                  055-832-9882
-                </div>
+                <Typography variant={'caption'}>진료 문의</Typography>
+                <div className={classes.subText}>055-832-9882</div>
               </div>
               <div className={classes.contact}>
-                <Typography variant={"caption"}>
-                  Fax
-                </Typography>
-                <div className={classes.subText}>
-                  055-832-9881
-                </div>
+                <Typography variant={'caption'}>Fax</Typography>
+                <div className={classes.subText}>055-832-9881</div>
               </div>
             </Grid>
             <Grid item xs={12} sm={5}>
               <div className={classes.openHour}>
-                <Typography variant={"h5"}>
-                  평일
-                </Typography>
-                <div className={classes.subText} >
-                  오전 8:30 ~ 오후 6:00
-                </div>
-                <div className={classes.miniText} >
+                <Typography variant={'h5'}>평일</Typography>
+                <div className={classes.subText}>오전 8:30 ~ 오후 6:00</div>
+                <div className={classes.miniText}>
                   *점심시간 오후 12:30 ~ 1:30
                 </div>
-              </div>
-              <div className={classes.openHour}>
-                <Typography variant={"h5"}>
-                  토요일
-                </Typography>
-                <div className={classes.subText}  >
-                  오전 8:30 ~ 오후 12:30
+                <div className={classes.miniTextWarning}>
+                  * 홀수 주 (매월 첫째, 셋째 주 수요일 오후 휴진)
                 </div>
               </div>
               <div className={classes.openHour}>
-                <Typography variant={"h5"}>
-                  일요일 / 공휴일
-                </Typography>
-                <div className={classes.subText} >
-                  휴무
+                <Typography variant={'h5'}>토요일</Typography>
+                <div className={classes.subText}>오전 8:30 ~ 오후 12:30</div>
+                <div className={classes.miniTextWarning}>
+                  * 짝수 주 (매월 둘째, 넷째 주 휴진)
                 </div>
               </div>
-
+              <div className={classes.openHour}>
+                <Typography variant={'h5'}>일요일 / 공휴일</Typography>
+                <div className={classes.subText}>휴무</div>
+              </div>
             </Grid>
             <Grid item xs={12} sm={4} className={classes.imgContainer}>
               <img src={ClinicSketch} className={classes.img} alt="Sketch" />
@@ -119,4 +117,4 @@ const Info = (props) => {
   )
 }
 
-export default withStyles(styles)(Info);
+export default withStyles(styles)(Info)
